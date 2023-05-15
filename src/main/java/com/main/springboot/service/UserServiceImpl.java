@@ -1,7 +1,7 @@
 package com.main.springboot.service;
 
 
-import com.main.springboot.DAO.UserRepository;
+import com.main.springboot.repository.UserRepository;
 import com.main.springboot.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,6 +15,10 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
+
+    public UserServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     public UserServiceImpl() {
     }

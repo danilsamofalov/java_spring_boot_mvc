@@ -26,7 +26,8 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    public void setUserService(UserService userService) {
+
+    public UserController(UserService userService) {
         this.userService = userService;
     }
 
